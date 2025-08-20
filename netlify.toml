@@ -1,0 +1,28 @@
+[[headers]]
+for = "/Build/*.wasm.gz"
+[headers.values]
+  Content-Type = "application/wasm"
+  Content-Encoding = "gzip"
+
+[[headers]]
+for = "/Build/*.data.gz"
+[headers.values]
+  Content-Type = "application/octet-stream"
+  Content-Encoding = "gzip"
+
+[[headers]]
+for = "/Build/*.js.gz"
+[headers.values]
+  Content-Type = "application/javascript"
+  Content-Encoding = "gzip"
+
+[[headers]]
+for = "/Build/*.gz"
+[headers.values]
+  Content-Encoding = "gzip"
+  Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  Permissions-Policy = "camera=(self), microphone=(self)"
